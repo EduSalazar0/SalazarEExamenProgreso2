@@ -36,16 +36,27 @@
                 HorizontalOptions="Center"
                 Text="La última recarga realizada fue:" />
 
-
             <Label
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                x:Name="esalazar_label7"
+                Text="Nombre:"/>
+                
+             <Label
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 x:Name="esalazar_label4"
                 Text="{Binding Nombre}"/>
-            <Label
+             <Label
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    x:Name="esalazar_label8"
+                    Text="Numero:"/>
+                <Label
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 x:Name="esalazar_label6"
+                
                 Text="{Binding Numero}"/>
 
 

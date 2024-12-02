@@ -25,12 +25,14 @@
         
         <Label Grid.Row="1"
                Text="Salazar"
+               TextColor="Red"
                HorizontalOptions="Center"
                VerticalOptions="Center" />
         
         <Label Grid.Row="1"
                Grid.Column="1"
                Text="Castro"
+               TextColor="YellowGreen"
                HorizontalOptions="Center"
                VerticalOptions="Center" />
     </Grid>
