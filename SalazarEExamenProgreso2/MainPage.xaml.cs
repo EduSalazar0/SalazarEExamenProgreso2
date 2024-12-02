@@ -1,24 +1,43 @@
-﻿namespace SalazarEExamenProgreso2
+﻿using SalazarEExamenProgreso2.Interfaces;
+using SalazarEExamenProgreso2.Models;
+using SalazarEExamenProgreso2.Repositories;
+
+namespace SalazarEExamenProgreso2
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        IUsuarioRepository _usuarioRepository;
+        Usuario usuario = new Usuario();
 
         public MainPage()
         {
             InitializeComponent();
+            _usuarioRepository = new UsuarioProArchivosRepository();
+            
+            usuario = _usuarioRepository.DevuelveUsuario();
+            BindingContext = usuario;
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void Recargar_Clicked(object sender, EventArgs e)
         {
-            count++;
+            Usuario usu = new Usuario
+            {
+                Nombre = esalazar_editor_Name.Text,
+                Numero = esalazar_editor_Telefono.Text,
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
+            };
+            bool guardar_usuario = _usuarioRepository.CrearUsuario(usu);
+
+            if (guardar_usuario)
+            {
+                await DisplayAlert("Alerta", "El numero de telefono se valido correctamente", "Ok");
+                Navigation.PushAsync(new MainPage());
+            }
             else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            {
+                await DisplayAlert("Alerta", "El numero de telefono no se valido", "Ok");
+                Navigation.PushAsync(new MainPage());
+            }
         }
     }
 

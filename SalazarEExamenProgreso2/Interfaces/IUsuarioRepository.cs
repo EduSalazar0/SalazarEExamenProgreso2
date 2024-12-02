@@ -10,6 +10,7 @@ namespace SalazarEExamenProgreso2.Interfaces
     public interface IUsuarioRepository
     {
         bool CrearUsuario(Usuario usuario);
+
         Usuario DevuelveUsuario();
 
     }

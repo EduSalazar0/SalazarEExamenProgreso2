@@ -16,5 +16,6 @@ namespace SalazarEExamenProgreso2.Models
         [Required(ErrorMessage ="El numero de telefono es necesario")]
         public string Numero { get; set; }
 
+        
     }
 }

@@ -35,26 +35,21 @@
             <Label
                 x:Name="esalazar_label3"
                 Text="La última recarga realizada fue:" />
-            
-            
+
+
             <Label
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 x:Name="esalazar_label4"
-                Text="Nombre: "+"{Binding Nombre}"/>
-            <Label
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                x:Name="esalazar_label5"
-                Text="ID:"+"{Binding Id}"/>
+                Text="{Binding Nombre}"/>
             <Label
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 x:Name="esalazar_label6"
-                Text="Número:"+"{Binding Numero}"
-                
-            
-            <Button
+                Text="{Binding Numero}"/>
+
+
+             <Button
                 x:Name="esalazar_btnRecargar"
                 Text="Recargar"
                 Clicked="Recargar_Clicked"
