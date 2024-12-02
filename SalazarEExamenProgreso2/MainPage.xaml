@@ -27,13 +27,13 @@
             
             <Editor
                 x:Name="esalazar_editor_Name"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
                 Placeholder="Ingrese el Nombre"
                 AutoSize="TextChanges"
                 HeightRequest="25"/>
             <Label
                 x:Name="esalazar_label3"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
                 Text="La última recarga realizada fue:" />
 
 

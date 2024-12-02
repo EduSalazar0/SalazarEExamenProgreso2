@@ -11,10 +11,10 @@ namespace SalazarEExamenProgreso2
 
         public MainPage()
         {
-            InitializeComponent();
-            _usuarioRepository = new UsuarioProArchivosRepository();
             
+            _usuarioRepository = new UsuarioProArchivosRepository();
             usuario = _usuarioRepository.DevuelveUsuario();
+            InitializeComponent();
             BindingContext = usuario;
         }
 
