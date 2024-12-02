@@ -11,7 +11,22 @@ namespace SalazarEExamenProgreso2.Repositories
 {
     public class UsuarioProArchivosRepository : IUsuarioRepository
     {
-        private string _fileName = Path.Combine(FileSystem.AppDataDirectory, "usuario.txt");
+        private string _fileName = Path.Combine(FileSystem.AppDataDirectory, "EduardoSalazar_usuario.txt");
+
+        public bool CrearUsuario(Usuario usuario)
+        {
+            try
+            {
+                string json_data = JsonConvert.SerializeObject(usuario);
+                File.WriteAllText(_fileName, json_data);
+                return true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
 
         public Usuario DevuelveUsuario()
         {
